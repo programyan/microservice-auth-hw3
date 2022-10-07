@@ -1,0 +1,34 @@
+version: '3.4'
+
+services:
+  postgres:
+    image: postgres:14.5-alpine
+    volumes:
+      - postgres:/var/lib/postgresql/data
+      - ./log:/root/log:cached
+    environment:
+      - PSQL_HISTFILE=/root/log/.psql_history
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    command:
+      - postgres
+      - -c
+      - shared_buffers=1GB
+      - -c
+      - work_mem=32MB
+      - -c
+      - effective_cache_size=2GB
+      - -c
+      - random_page_cost=0.1
+      - -c
+      - fsync=off
+      - -c
+      - synchronous_commit=off
+      - -c
+      - full_page_writes=off
+      - -c
+      - wal_level=logical
+    ports:
+      - 5434:5432
+
+volumes:
+  postgres:

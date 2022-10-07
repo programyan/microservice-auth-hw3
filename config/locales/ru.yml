@@ -1,0 +1,21 @@
+ru:
+  api:
+    errors:
+      missing_params: В запросе отсутствуют необходимые параметры
+  services:
+    user_sessions:
+      create:
+        unauthorized: Сессия не может быть создана
+    auth:
+      fetch_user:
+        forbidden: Доступ к ресурсу ограничен
+  user:
+    errors:
+      name:
+        blank: Укажите имя
+        invalid: Укажите имя, используя буквы, цифры или символ подчёркивания
+      password:
+        blank: Укажите пароль
+      email:
+        blank: Укажите email
+        taken: Email уже существует
