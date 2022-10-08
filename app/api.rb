@@ -74,7 +74,7 @@ class Api < Grape::API
     mount_path: '/swagger/docs',
     info: {
       title: 'Ads API',
-      description: 'An API for create and read the ads',
+      description: 'An API for signing up, login and validate tockens',
       contact_name: 'Andrew Ageev',
       contact_email: 'ageev86@gmail.com',
       license: 'MIT',
