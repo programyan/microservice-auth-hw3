@@ -20,7 +20,7 @@ describe Api, :aggregate_failures do
     end
 
     context 'with token' do
-      before { post "/", nil, 'Authorization' => "Bearer #{token}" }
+      before { post "/", nil, 'HTTP_AUTHORIZATION' => "Bearer #{token}" }
 
       context 'and it is invalid' do
         let(:token) { 'invalid' }

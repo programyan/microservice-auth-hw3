@@ -8,7 +8,7 @@ module AuthHelper
   end
 
   def matched_token
-    result = env['Authorization']&.match(AUTH_TOKEN)
+    result = env['HTTP_AUTHORIZATION']&.match(AUTH_TOKEN)
     return if result.blank?
 
     result[:token]
