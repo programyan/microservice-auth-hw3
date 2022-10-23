@@ -1,8 +1,6 @@
 #!/usr/bin/env ruby
 
 require 'irb'
-require_relative '../config/loader'
-
-Loader.load_all!
+require_relative '../config/environment'
 
 IRB.start

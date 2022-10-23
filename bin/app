@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+require_relative '../config/environment'
+
+puts "* Environment: #{Application.environment}"
+puts "* Started"
+puts 'Use Ctrl+C to stop'
+
+begin
+  require_relative '../config/consumer'
+  loop { sleep(3) }
+rescue Interrupt
+  puts "\nStopped successfully"
+end

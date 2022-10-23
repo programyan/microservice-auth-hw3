@@ -20,6 +20,7 @@ gem 'dry-initializer'
 gem 'dry-validation'
 
 # api
+gem 'bunny'
 gem 'jsonapi-serializer'
 
 # security
